@@ -1,5 +1,6 @@
 package com.company.service.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -19,7 +20,12 @@ public class Product implements Serializable {
     private Double price;
     private String imgUrl;
 
-    @Transient
+    @ManyToMany
+    @JoinTable(
+            name = "tb_product_category", // name of the intermediate table
+            joinColumns = @JoinColumn(name = "product_id"), // column referencing the Product entity
+            inverseJoinColumns = @JoinColumn(name = "category_id") // column referencing the Category entity
+    )
     private Set<Category> categories = new HashSet<>();
 
     public Product() {}
