@@ -1,14 +1,8 @@
 package com.company.service.config;
 
-import com.company.service.entities.Category;
-import com.company.service.entities.Order;
-import com.company.service.entities.Product;
-import com.company.service.entities.User;
+import com.company.service.entities.*;
 import com.company.service.enums.OrderStatus;
-import com.company.service.repositories.CategoryRepository;
-import com.company.service.repositories.OrderRepository;
-import com.company.service.repositories.ProductRepository;
-import com.company.service.repositories.UserRepository;
+import com.company.service.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
@@ -32,6 +26,9 @@ public class TestConfig implements CommandLineRunner {
 
     @Autowired
     private ProductRepository productRepository;
+
+    @Autowired
+    private OrderItemRepository orderItemRepository;
 
     // All put inside here will be executed when application starts
     @Override
@@ -68,5 +65,14 @@ public class TestConfig implements CommandLineRunner {
 
         userRepository.saveAll(Arrays.asList(u1, u2));
         orderRepository.saveAll(Arrays.asList(o1, o2, o3));
+
+        OrderItem oi1 = new OrderItem(o1, p1, 2, p1.getPrice());
+        OrderItem oi2 = new OrderItem(o1, p3, 1, p3.getPrice());
+        OrderItem oi3 = new OrderItem(o2, p3, 2, p3.getPrice());
+        OrderItem oi4 = new OrderItem(o3, p5, 2, p5.getPrice());
+
+        orderItemRepository.saveAll(Arrays.asList(oi1, oi2, oi3, oi4));
+
+        System.out.println("DONE!");
     }
 }
