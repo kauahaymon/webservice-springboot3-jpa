@@ -2,6 +2,7 @@ package com.company.service.entities;
 
 import com.company.service.entities.pk.OrderItemPK;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -11,6 +12,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "tb_order_item")
+@JsonPropertyOrder({"quantity", "price", "subTotal", "product"})
 public class OrderItem implements Serializable {
 
     @EmbeddedId
@@ -58,6 +60,10 @@ public class OrderItem implements Serializable {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Double getSubTotal() {
+        return price * quantity;
     }
 
     @Override
