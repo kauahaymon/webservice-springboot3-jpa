@@ -13,7 +13,6 @@
 
 ## Database Schema
 ![schema](https://github.com/kauahaymon/illustrative-images/blob/master/schema%20diagram.svg)
-![schema](https://github.com/kauahaymon/illustrative-images/blob/master/schema%20diagram%202.svg)
 
 ## Technologies Used
 
@@ -38,6 +37,8 @@
 ## Order Request Demonstration
 
 Body of a client order request:
+
+Link: <a href="https://webservice-springboot3-jpa.onrender.com/orders/1" target="_blank" rel="noopener noreferrer">Order 1</a>
 
 ```json
 {
@@ -97,11 +98,9 @@ Body of a client order request:
 }
 ```
 
-Link: https://webservice-springboot3-jpa.onrender.com/orders/1
-
 ## Author
 
-- [Kauã Haymon](https://www.linkedin.com/in/kauahaymon/)
+- <a href="https://www.linkedin.com/in/kauahaymon/" target="_blank" rel="noopener noreferrer">Kauã Haymon</a> no LinkedIn.</p>
 
 ## Thanks to
 
