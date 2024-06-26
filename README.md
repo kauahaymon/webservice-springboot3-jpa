@@ -11,9 +11,8 @@
 
 ![Domain](https://github.com/kauahaymon/illustrative-images/blob/master/Class1.svg)
 
-## Domain Instance
-
-image
+## Database Schema
+![schema](https://github.com/kauahaymon/illustrative-images/blob/master/schema%20diagram.svg)
 
 ## Technologies Used
 
