@@ -13,6 +13,7 @@
 
 ## Database Schema
 ![schema](https://github.com/kauahaymon/illustrative-images/blob/master/schema%20diagram.svg)
+![schema](https://github.com/kauahaymon/illustrative-images/blob/master/schema%20diagram%202.svg)
 
 ## Technologies Used
 
