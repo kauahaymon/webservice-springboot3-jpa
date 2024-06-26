@@ -2,6 +2,8 @@
 
 [![NPM License](https://img.shields.io/npm/l/react)](https://github.com/kauahaymon/webservice-springboot3-jpa/blob/main/LICENSE)
 
+Leitura em português: [README](https://github.com/kauahaymon/webservice-springboot3-jpa/blob/main/README_Portuguese.md)
+
 ## About the project
 
 - This project is a fully functional e-commerce web application built using Spring Boot and JPA / Hibernate.
