@@ -35,7 +35,7 @@
 - Arquitetura em Camadas
 - Docker
 
-## Demonstração de Pedido de Ordem
+## Demonstração de requisição de pedido
 
 Corpo de uma solicitação de pedido de cliente:
 
