@@ -1,4 +1,4 @@
-# Web Service Application
+# Web Service REST API
 
 [![NPM License](https://img.shields.io/npm/l/react)](https://github.com/kauahaymon/webservice-springboot3-jpa/blob/main/LICENSE)
 
