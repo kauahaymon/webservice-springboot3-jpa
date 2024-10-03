@@ -2,9 +2,9 @@ package com.company.service.entities;
 
 import com.company.service.enums.OrderStatus;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
@@ -16,7 +16,6 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
 @Table(name = "tb_order")
 public class Order implements Serializable {
 
@@ -26,17 +25,21 @@ public class Order implements Serializable {
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GTM")
     private Instant moment;
+
     private Integer orderStatus;
 
     @ManyToOne
     @JoinColumn(name = "client_id")
     private User client;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "id.order")
     private Set<OrderItem> items = new HashSet<>();
 
     @OneToOne(mappedBy = "order", cascade = CascadeType.ALL) // two entities will have same id
     private Payment payment;
+
+    public Order() {}
 
     public Order(Long id, Instant moment, OrderStatus orderStatus, User client) {
         this.id = id;
